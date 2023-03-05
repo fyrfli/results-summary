@@ -21,6 +21,7 @@ Users should be able to:
 
 - Solution URL: [Repository](https://github.com/fyrfli/results-summary)
 - Live Site URL: [Live](https://fyrfli.github.io/results-summary/)
+- Can also be viewed [here](https://results-summary.fyrfli.io)
 
 ## My process
 
