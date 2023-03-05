@@ -41,3 +41,5 @@ I might continue the challenge and add in some dynamic data pulling but for now,
 
 - Website - [Camille Frantz (@fyrfli)](https://fyrfli.io)
 - Frontend Mentor - [@fyrfli](https://www.frontendmentor.io/profile/fyrfli)
+
+[![status-badge](https://ci.fyrfli.dev/api/badges/fyrfli/results-summary/status.svg)](https://ci.fyrfli.dev/fyrfli/results-summary)
