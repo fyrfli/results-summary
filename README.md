@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./solution-desktop-screenshot.png)
+![](./assets/images/solution-desktop-screenshot.png)
 
 ### Links
 
