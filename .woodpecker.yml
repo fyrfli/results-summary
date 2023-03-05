@@ -1,0 +1,23 @@
+pipeline:
+  publish:
+    image: appleboy/drone-scp
+    settings:
+      host: 
+        from_secret: DOIP
+      username: camille
+      key: 
+        from_secret: titanKey
+      target: /home/www/results-summary
+      source: .
+      
+  restart:
+    image: appleboy/drone-ssh
+    settings:
+      host: 
+        from_secret: DOIP
+      username: camille
+      key: 
+        from_secret: titanKey
+      script:
+        - docker restart results-summary
+branches: main
