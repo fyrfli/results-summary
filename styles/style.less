@@ -1,0 +1,224 @@
+// define the font
+@font-face {
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+}
+
+// mixins
+//
+// colours
+//
+
+// primary
+@lightred: hsl(0, 100%, 67%);
+@orangeyyellow: hsl(39, 100%, 56%);
+@greenteal: hsl(166, 100%, 37%);
+@cobaltblue: hsl(234, 85%, 45%);
+
+// gradients
+@lightslateblue: hsl(252, 100%, 67%); //background
+@lightroyalblue: hsl(241, 81%, 54%); //background
+@violetblue: hsla(256, 72%, 46%, 1); //circle
+@persianblue: hsla(241, 72%, 46%, 0); //circle
+
+//neutral
+@white: hsl(0, 0%, 100%);
+@paleblue: hsl(221, 100%, 96%);
+@lightlavender: hsl(241, 100%, 89%);
+@darkgreyblue: hsl(224, 30%, 27%);
+
+
+// reset basics
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+// body styling for all elements
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    margin: 0.2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.result {
+    flex-basis: 100%;
+    background: linear-gradient(to bottom, @lightslateblue, 25%, @lightroyalblue);
+    color: @lightlavender;
+    margin: auto;
+    border-radius: 0 0 24px 24px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.your-result {
+    font-size: 1.4rem;
+    padding-bottom: 1.2rem;
+}
+
+.the-score {
+    padding: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(to bottom, @violetblue, @persianblue);
+}
+
+.score {
+    font-size: 4rem;
+    color: @white;
+}
+.score-total {
+    font-size: 1.1rem;
+    color: @lightlavender;
+    opacity: 0.7;
+}
+
+.great {
+    color: @white;
+    font-size: 1.8rem;
+    padding-top: 1rem;
+}
+.you-scored {
+    font-size: 0.95rem;
+    padding-top: 0.4rem;
+    padding-bottom: 1.2rem;
+    width: 180px;
+    margin: auto;
+}
+
+.summary-details() {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+}
+
+.summary {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem 2rem;
+    gap: 18px;
+    font-weight: 700;
+}
+
+.summaryhdr {
+    text-align: left;
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+}
+
+.reaction {
+    background-color: lighten(@lightred, 30%);
+    .summary-details();
+}
+.reaction-left {
+    color: @lightred;
+}
+.score-right {
+    color: @darkgreyblue;
+}
+.total-score {
+    opacity: 0.4;
+}
+.memory {
+    background-color: lighten(@orangeyyellow, 40%);
+    .summary-details();
+}
+.memory-left {
+    color: @orangeyyellow;
+}
+.verbal {
+    background-color: lighten(@greenteal, 60%);
+    .summary-details();
+}
+.verbal-left {
+    color: @greenteal;
+}
+.visual {
+    background-color: lighten(@cobaltblue, 52%);
+    .summary-details();
+}
+.visual-left {
+    color: @cobaltblue;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+.continue {
+    width: 80%;
+    margin: auto 2rem;
+    background-color: @darkgreyblue;
+    border-radius: 24px;
+    padding: 1rem 6rem;
+    color: @white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.continue:hover {
+    background-color: @lightroyalblue;
+}
+
+.footer {
+    /* grid-row: 3; */
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+
+// provided styling for the footer
+/* .attribution { font-size: 11px; text-align: center; } */
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 980px) {
+    .container {
+        margin: 4rem auto;
+        max-width: 620px;
+        align-items: stretch;
+        align-content: stretch;
+        flex-flow: row nowrap;
+    }  
+    .result {
+        border-radius: 12px;
+        flex-basis: 100%;
+        padding: 6rem 2rem;
+    }
+    .reaction,
+    .memory,
+    .verbal,
+    .visual {
+        padding: 1rem;
+    }
+    .summary {
+        flex-basis: 100%;
+    }
+}
